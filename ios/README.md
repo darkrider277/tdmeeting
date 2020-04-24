@@ -51,7 +51,7 @@ To get started:
   jitsiMeetView.delegate = self;
 
   JitsiMeetConferenceOptions *options = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
-      builder.serverURL = [NSURL URLWithString:@"https://meet.jit.si"];
+      builder.serverURL = [NSURL URLWithString:@"https://hoptructuyen.tandan.com.vn"];
       builder.room = @"test123";
       builder.audioOnly = YES;
   }];
@@ -75,7 +75,7 @@ Joins the conference specified by the given options.
 
 ```objc
   JitsiMeetConferenceOptions *options = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
-      builder.serverURL = [NSURL URLWithString:@"https://meet.jit.si"];
+      builder.serverURL = [NSURL URLWithString:@"https://hoptructuyen.tandan.com.vn"];
       builder.room = @"test123";
       builder.audioOnly = NO;
       builder.audioMuted = NO;

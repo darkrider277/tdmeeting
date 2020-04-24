@@ -1,6 +1,6 @@
 # Jitsi Meet quick install
 
-This guide helps you  ___host your own Jitsi server___. If you want to have a video conference without setting up any infrastructure, use https://meet.jit.si instead.
+This guide helps you  ___host your own Jitsi server___. If you want to have a video conference without setting up any infrastructure, use https://hoptructuyen.tandan.com.vn instead.
 
 This document describes the required steps for a quick Jitsi Meet installation on a Debian based GNU/Linux system. Debian 9 (Stretch) or later, and Ubuntu 18.04 (Bionic Beaver) or later are supported out-of-the-box.
 

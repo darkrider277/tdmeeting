@@ -31,7 +31,7 @@
         "confirmAddLink": "Bạn có muốn thêm một liên kiết tới sự kiện này?",
         "error": {
             "appConfiguration": "Tích hợp lịch chưa được cấu hình đúng.",
-            "generic": "Một lỗi xuất hiện. Vui lòng kiểm tra cấu hình lịch hoặc thử làm tươi lịch.",
+            "generic": "Một lỗi xuất hiện. Vui lòng kiểm tra cấu hình lịch hoặc thử làm mới lịch.",
             "notSignedIn": "Một lỗi xảy ra khi xác thực để xem lịch sự kiện. Vui lòng kiểm tra cấu hình lịch và thử đăng nhập lại."
         },
         "join": "Tham gia",
@@ -41,7 +41,7 @@
         "ongoingMeeting": "cuộc họp đang diễn ra",
         "permissionButton": "Mở cấu hình",
         "permissionMessage": "Yêu cầu quyền truy cập Lịch để thấy cuộc họp của bạn trên ứng dụng.",
-        "refresh": "Làm tươi lịch",
+        "refresh": "Làm mới lịch",
         "today": "Hôm nay"
     },
     "chat": {
@@ -160,7 +160,7 @@
         "dismiss": "Hủy",
         "displayNameRequired": "",
         "done": "Xong",
-        "enterDisplayName": "",
+        "enterDisplayName": "Vui lòng nhập tên của bạn",
         "error": "Lỗi",
         "externalInstallationMsg": "Bạn cần cài đặt tiện ích mở rộng chia sẻ máy tính của chúng tôi.",
         "externalInstallationTitle": "Yêu cầu tiện ích mở rộng",
@@ -198,7 +198,7 @@
         "muteParticipantButton": "Tắt tiếng",
         "muteParticipantDialog": "Bạn muốn tắt tiếng của người này? Bạn sẽ không thể bật lại tiếng, nhưng họ có thể tự bật lại tiếng bất cứ lúc nào.",
         "muteParticipantTitle": "Tắt tiếng của người tham dự này?",
-        "Ok": "Được",
+        "Ok": "Xong",
         "passwordLabel": "",
         "passwordNotSupported": "Phòng họp không hỗ trợ khóa bằng mật khẩu.",
         "passwordNotSupportedTitle": "",
@@ -477,7 +477,7 @@
         "unavailableTitle": "Ghi hình không hoạt động."
     },
     "sectionList": {
-        "pullToRefresh": "Kéo để làm tươi"
+        "pullToRefresh": "Kéo để làm mới"
     },
     "settings": {
         "calendar": {

@@ -1,13 +1,13 @@
 # Jitsi Meet API
 
-You can use the Jitsi Meet API to embed Jitsi Meet in to your application. You are also welcome to use it for embedding the globally distributed and highly available deployment on meet.jit.si itself. The only thing we ask for in that case is that you please DO NOT remove the jitsi.org logo from the top left corner.
+You can use the Jitsi Meet API to embed Jitsi Meet in to your application. You are also welcome to use it for embedding the globally distributed and highly available deployment on hoptructuyen.tandan.com.vn itself. The only thing we ask for in that case is that you please DO NOT remove the jitsi.org logo from the top left corner.
 
 ## Installation
 
 To embed Jitsi Meet in your application you need to add the Jitsi Meet API library:
 
 ```javascript
-<script src='https://meet.jit.si/external_api.js'></script>
+<script src='https://hoptructuyen.tandan.com.vn/external_api.js'></script>
 ```
 ## API
 
@@ -16,7 +16,7 @@ To embed Jitsi Meet in your application you need to add the Jitsi Meet API libra
 The next step for embedding Jitsi Meet is to create the Jitsi Meet API object.
 Its constructor gets a number of options:
 
-* **domain**: domain used to build the conference URL, 'meet.jit.si' for
+* **domain**: domain used to build the conference URL, 'hoptructuyen.tandan.com.vn' for
   example.
 * **options**: object with properties - the optional arguments:
     * **roomName**: (optional) name of the room to join.
@@ -35,7 +35,7 @@ Its constructor gets a number of options:
 Example:
 
 ```javascript
-const domain = 'meet.jit.si';
+const domain = 'hoptructuyen.tandan.com.vn';
 const options = {
     roomName: 'JitsiMeetAPIExample',
     width: 700,
@@ -48,7 +48,7 @@ const api = new JitsiMeetExternalAPI(domain, options);
 You can set the initial media devices for the call:
 
 ```javascript
-const domain = 'meet.jit.si';
+const domain = 'hoptructuyen.tandan.com.vn';
 const options = {
     ...
     devices: {
@@ -88,7 +88,7 @@ const api = new JitsiMeetExternalAPI(domain, options);
 You can set the userInfo(email, display name) for the call:
 
 ```javascript
-var domain = "meet.jit.si";
+var domain = "hoptructuyen.tandan.com.vn";
 var options = {
     ...
     userInfo: {

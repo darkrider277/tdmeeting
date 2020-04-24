@@ -139,7 +139,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                         <TextInput
                             autoCorrect = { false }
                             onChangeText = { this._onChangeDisplayName }
-                            placeholder = 'John Doe'
+                            placeholder = 'Tên'
                             value = { displayName } />
                     </FormRow>
                     <FormRow
@@ -184,12 +184,9 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                     <FormRow
                         label = 'settingsView.version'>
                         <Text>
-                            { `${AppInfo.version} build ${AppInfo.buildNumber}` }
+                            { `${AppInfo.version}` }
                         </Text>
                     </FormRow>
-                    <FormSectionHeader
-                        label = 'settingsView.advanced' />
-                    { this._renderAdvancedSettings() }
                 </ScrollView>
             </JitsiModal>
         );

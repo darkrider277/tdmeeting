@@ -10,6 +10,10 @@ import {
 } from 'react-native';
 
 import { getName } from '../../app';
+import {
+    getLocalParticipant,
+} from '../../base/participants';
+import { openDisplayNamePrompt } from '../../display-name';
 
 import { ColorSchemeRegistry } from '../../base/color-scheme';
 import { translate } from '../../base/i18n';
@@ -90,6 +94,10 @@ class WelcomePage extends AbstractWelcomePage {
                 response === 'granted'
                     && dispatch(createDesiredLocalTracks(MEDIA_TYPE.VIDEO));
             });
+        }
+        if(!this.props._localParticipant.name)
+        {
+            dispatch(openDisplayNamePrompt());
         }
     }
 
@@ -231,14 +239,26 @@ class WelcomePage extends AbstractWelcomePage {
         }
 
         return (
+            <>
+            {this.state.room?
             <TouchableHighlight
                 accessibilityLabel =
                     { t('welcomepage.accessibilityLabel.join') }
                 onPress = { this._onJoin }
-                style = { styles.button }
+                style = { [styles.button, { backgroundColor:ColorPalette.blue}] }
                 underlayColor = { ColorPalette.white }>
                 { children }
             </TouchableHighlight>
+            :
+            <View
+                accessibilityLabel =
+                    { t('welcomepage.accessibilityLabel.join') }
+                style = { [styles.button, { backgroundColor: '#9E9E9E'}] }
+                underlayColor = { ColorPalette.white }>
+                { children }
+            </View>
+            }
+            </>
         );
     }
 
@@ -264,11 +284,8 @@ class WelcomePage extends AbstractWelcomePage {
                     </Header>
                     <SafeAreaView style = { styles.roomContainer } >
                         <View style = { styles.joinControls } >
-                            <Text style = { styles.enterRoomText }>
-                                { t('welcomepage.roomname') }
-                            </Text>
                             <TextInput
-                                accessibilityLabel = { t(roomnameAccLabel) }
+                                accessibilityLabel = { t('welcomepage.roomname') }
                                 autoCapitalize = 'none'
                                 autoComplete = 'off'
                                 autoCorrect = { false }
@@ -277,7 +294,7 @@ class WelcomePage extends AbstractWelcomePage {
                                 onChangeText = { this._onRoomChange }
                                 onFocus = { this._onFieldFocus }
                                 onSubmitEditing = { this._onJoin }
-                                placeholder = { this.state.roomPlaceholder }
+                                placeholder = { t('welcomepage.roomname') }
                                 placeholderTextColor = { PLACEHOLDER_TEXT_COLOR }
                                 returnKeyType = { 'go' }
                                 style = { styles.textInput }
@@ -334,9 +351,11 @@ class WelcomePage extends AbstractWelcomePage {
  * @returns {Object}
  */
 function _mapStateToProps(state) {
+    const _localParticipant = getLocalParticipant(state);
     return {
         ..._abstractMapStateToProps(state),
-        _headerStyles: ColorSchemeRegistry.get(state, 'Header')
+        _headerStyles: ColorSchemeRegistry.get(state, 'Header'),
+        _localParticipant
 
         // _reducedUI: state['features/base/responsive-ui'].reducedUI
     };

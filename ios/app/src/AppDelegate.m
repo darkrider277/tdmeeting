@@ -41,10 +41,10 @@
 
     jitsiMeet.conferenceActivityType = JitsiMeetConferenceActivityType;
     jitsiMeet.customUrlScheme = @"org.jitsi.meet";
-    jitsiMeet.universalLinkDomains = @[@"meet.jit.si", @"alpha.jitsi.net", @"beta.meet.jit.si"];
+    jitsiMeet.universalLinkDomains = @[@"hoptructuyen.tandan.com.vn", @"alpha.jitsi.net", @"beta.hoptructuyen.tandan.com.vn"];
 
     jitsiMeet.defaultConferenceOptions = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
-        builder.serverURL = [NSURL URLWithString:@"https://meet.jit.si"];
+        builder.serverURL = [NSURL URLWithString:@"https://hoptructuyen.tandan.com.vn"];
         builder.welcomePageEnabled = YES;
 
         // Apple rejected our app because they claim requiring a

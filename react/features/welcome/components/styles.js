@@ -55,7 +55,6 @@ export default {
      * Join button style.
      */
     button: {
-        backgroundColor: ColorPalette.blue,
         borderColor: ColorPalette.blue,
         borderRadius: 4,
         borderWidth: 1,

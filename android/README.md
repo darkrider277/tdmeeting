@@ -159,7 +159,7 @@ public class MainActivity extends FragmentActivity implements JitsiMeetActivityI
 
         view = new JitsiMeetView(this);
         JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-            .setRoom("https://meet.jit.si/test123")
+            .setRoom("https://hoptructuyen.tandan.com.vn/test123")
             .build();
         view.join(options);
 
@@ -253,7 +253,7 @@ Example:
 
 ```java
 JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-    .setServerURL(new URL("https://meet.jit.si"))
+    .setServerURL(new URL("https://hoptructuyen.tandan.com.vn"))
     .setRoom("test123")
     .setAudioMuted(false)
     .setVideoMuted(false)
