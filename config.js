@@ -261,7 +261,7 @@ var config = {
     // enableClosePage: false,
 
     // Disable hiding of remote thumbnails when in a 1-on-1 conference call.
-    // disable1On1Mode: false,
+     disable1On1Mode: true,
 
     // Default language for the user interface.
     // defaultLanguage: 'en',

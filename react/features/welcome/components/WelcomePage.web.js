@@ -13,6 +13,10 @@ import { SettingsButton, SETTINGS_TABS } from '../../settings';
 import { AbstractWelcomePage, _mapStateToProps } from './AbstractWelcomePage';
 import Tabs from './Tabs';
 
+import './styles.css'
+
+import styled from 'styled-components'
+
 /**
  * The pattern used to validate room name.
  * @type {string}
@@ -29,7 +33,16 @@ const WINDOW_WIDTH_THRESHOLD = 425;
  * The Web container rendering the welcome page.
  *
  * @extends AbstractWelcomePage
+ * 
  */
+
+const view1 = styled.div`
+display: 'inline-flex'
+`
+const view2 = styled.div`
+.header {position: relative;background-image: url(https://hcc.namdinh.gov.vn/portaldvc/_res/img/bg-header.png);background-repeat: no-repeat;background-position:top center;}
+`
+
 class WelcomePage extends AbstractWelcomePage {
     /**
      * Default values for {@code WelcomePage} component's properties.
@@ -168,9 +181,7 @@ class WelcomePage extends AbstractWelcomePage {
                 className = { `welcome ${showAdditionalContent
                     ? 'with-content' : 'without-content'}` }
                 id = 'welcome_page'>
-                <div className = 'welcome-watermark'>
-                    <Watermarks />
-                </div>
+                
                 <div className = 'header'>
                     <div className = 'welcome-page-settings'>
                         <SettingsButton
@@ -182,20 +193,19 @@ class WelcomePage extends AbstractWelcomePage {
                             : null
                         }
                     </div>
-                    <div className = 'header-image' />
-                    <div className = 'header-text'>
-                        <h1 className = 'header-text-title'>
-                            { t('welcomepage.title') }
-                        </h1>
-                        <p className = 'header-text-description'>
-                            { t('welcomepage.appDescription',
-                                { app: APP_NAME }) }
-                        </p>
+                    <div className='view2'>
+                        <h2 class="text1">SỞ THÔNG TIN VÀ TRUYỀN THÔNG</h2>
+                        <h3 class="text2">TRUNG TÂM CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG NAM ĐỊNH</h3>
                     </div>
+
+                    
+
+                    <div className='view1'>
+                    
                     <div id = 'enter_room'>
                         <div className = 'enter-room-input-container'>
                             <div className = 'enter-room-title'>
-                                { t('welcomepage.enterRoomTitle') }
+                                Bắt đầu cuộc họp mới có tên:
                             </div>
                             <form onSubmit = { this._onFormSubmit }>
                                 <input
@@ -204,9 +214,8 @@ class WelcomePage extends AbstractWelcomePage {
                                     id = 'enter_room_field'
                                     onChange = { this._onRoomChange }
                                     pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
-                                    placeholder = { this.state.roomPlaceholder }
+                                    placeholder = 'Điền tên phòng'
                                     ref = { this._setRoomInputRef }
-                                    title = { t('welcomepage.roomNameAllowedChars') }
                                     type = 'text'
                                     value = { this.state.room } />
                             </form>
@@ -216,19 +225,51 @@ class WelcomePage extends AbstractWelcomePage {
                             id = 'enter_room_button'
                             onClick = { this._onFormSubmit }>
                             {
-                                showResponsiveText
-                                    ? t('welcomepage.goSmall')
-                                    : t('welcomepage.go')
+                                `Khởi tạo`
                             }
                         </div>
                     </div>
-                    { this._renderTabs() }
+
+                    
+                    <div id = 'enter_room'>
+                        <div className = 'enter-room-input-container'>
+                            <div className = 'enter-room-title'>
+                                Tham gia cuộc họp đang diễn ra có tên:
+                            </div>
+                            <form onSubmit = { this._onFormSubmit }>
+                                <input
+                                    autoFocus = { true }
+                                    className = 'enter-room-input'
+                                    id = 'enter_room_field'
+                                    onChange = { this._onRoomChange }
+                                    pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
+                                    placeholder = 'Điền tên phòng'
+                                    ref = { this._setRoomInputRef }
+                                    type = 'text'
+                                    value = { this.state.room } />
+                            </form>
+                        </div>
+                        <div
+                            className = 'welcome-page-button'
+                            id = 'enter_room_button'
+                            onClick = { this._onFormSubmit }>
+                            {
+                                `Vào họp`
+                            }
+                        </div>
+                    </div>
+                    
                 </div>
-                { showAdditionalContent
-                    ? <div
-                        className = 'welcome-page-content'
-                        ref = { this._setAdditionalContentRef } />
-                    : null }
+
+                </div>
+                
+                <div className="view3"><p className="text3">Để tham gia cuộc họp bằng Smartphone hoặc Tablet, bạn cần tải ứng dụng “<strong>Văn phòng điện tử Nam Định</strong>”:</p>
+                <div class="view4"><a href="https://play.google.com/store/apps/details?id=com.tandan.smartgovnamdinh">
+                <img className="image" src="https://kubet.casino/wp-content/uploads/2019/07/android1.png" alt=""></img>
+                </a><a href="https://apps.apple.com/vn/app/smartgovnamdinh/id1499923216">
+                <img className="image" src="https://i0.wp.com/www.decentralized.com/wp-content/uploads/revslider/homepage_fotos/get-it-on-app-store.png?ssl=1" alt=""></img>
+                </a></div></div>
+                
             </div>
         );
     }

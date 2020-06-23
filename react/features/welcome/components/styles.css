@@ -1,0 +1,51 @@
+.view1 {
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center 
+}
+
+.view2 {    
+    background-color: #0351a0;
+    position: relative;
+    background-image: url(https://hcc.namdinh.gov.vn/portaldvc/_res/img/bg-header.png);
+    background-repeat: no-repeat;
+    background-position:top center;
+    min-height: 100;
+    display: grid;
+    padding: 20
+}
+
+.view3 {
+    padding: 20;
+    justify-content: center;
+    text-align: center;
+}
+
+.view4 {
+    padding: 20
+}
+
+.image {
+    width:150px
+}
+
+.text3 {
+    color: black
+}
+
+.text1 {
+    text-align: center;
+    color: #f7ef07 !important;
+    font-family: RobotoCondensedBold;
+    font-weight: 600
+}
+
+.text2 {
+    text-align: center;
+    color: #f7ef07 !important;
+    font-family: RobotoCondensedBold;
+    font-weight: 600
+}
