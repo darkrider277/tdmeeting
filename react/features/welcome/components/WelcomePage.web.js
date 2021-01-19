@@ -195,7 +195,7 @@ class WelcomePage extends AbstractWelcomePage {
                     </div>
                     <div className='view2'>
                         <h2 class="text1">SỞ THÔNG TIN VÀ TRUYỀN THÔNG</h2>
-                        <h3 class="text2">TRUNG TÂM CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG NAM ĐỊNH</h3>
+                        <h3 class="text2">TRUNG TÂM CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG THÁI BÌNH</h3>
                     </div>
 
                     
@@ -263,12 +263,6 @@ class WelcomePage extends AbstractWelcomePage {
 
                 </div>
                 
-                <div className="view3"><p className="text3">Để tham gia cuộc họp bằng Smartphone hoặc Tablet, bạn cần tải ứng dụng “<strong>Văn phòng điện tử Nam Định</strong>”:</p>
-                <div class="view4"><a href="https://play.google.com/store/apps/details?id=com.tandan.smartgovnamdinh">
-                <img className="image" src="https://kubet.casino/wp-content/uploads/2019/07/android1.png" alt=""></img>
-                </a><a href="https://apps.apple.com/vn/app/smartgovnamdinh/id1499923216">
-                <img className="image" src="https://i0.wp.com/www.decentralized.com/wp-content/uploads/revslider/homepage_fotos/get-it-on-app-store.png?ssl=1" alt=""></img>
-                </a></div></div>
                 
             </div>
         );
